@@ -1,0 +1,42 @@
+name: Site web SOS Elec
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-web
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Dépendances
+        run: flutter pub get
+
+      - name: Construction du site
+        run: |
+          flutter build web --release --base-href /sos-elec/
+          # Les liens directs (ex. /sos-elec/Auth1) doivent aussi ouvrir l'application
+          cp build/web/index.html build/web/404.html
+          touch build/web/.nojekyll
+
+      - name: Mise en ligne (branche gh-pages)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web
+          publish_branch: gh-pages
+          force_orphan: true
