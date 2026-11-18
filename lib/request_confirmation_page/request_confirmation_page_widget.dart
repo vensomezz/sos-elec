@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/request_tracking_view.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
@@ -89,147 +90,66 @@ class _RequestConfirmationPageWidgetState
         ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.max,
+          child: RequestTrackingView(
+            guestAccessToken: widget!.guestAccessToken,
+            header: Container(
+              padding: EdgeInsets.all(18.0),
+              decoration: BoxDecoration(
+                color: Color(0xFFE8F5E9),
+                borderRadius: BorderRadius.circular(18.0),
+                border: Border.all(color: Color(0xFFA5D6A7)),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
+                  Row(
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            50.0, 50.0, 50.0, 0.0),
+                      Icon(Icons.check_circle_rounded,
+                          color: Color(0xFF2E7D32), size: 28.0),
+                      SizedBox(width: 10.0),
+                      Expanded(
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'e28ocxhw' /* Your request has been submitte... */,
+                          FFLocalizations.of(context)
+                                  .languageCode
+                                  .startsWith('fr')
+                              ? 'Demande envoyée !'
+                              : 'Request sent!',
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w800,
+                            fontSize: 20.0,
+                            color: Color(0xFF1B5E20),
                           ),
-                          textAlign: TextAlign.start,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                      ),
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'hdii7p09' /* Request number: */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.poppins(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    fontSize: 18.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
                         ),
                       ),
                     ],
                   ),
+                  SizedBox(height: 8.0),
+                  Text(
+                    FFLocalizations.of(context).getText('e28ocxhw'),
+                    style: GoogleFonts.poppins(
+                        fontSize: 14.0, color: Color(0xFF14213D)),
+                  ),
+                  SizedBox(height: 10.0),
+                  SelectableText(
+                    '${FFLocalizations.of(context).getText('hdii7p09').trim()} ${widget!.requestNumber ?? ''}',
+                    style: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15.0,
+                        color: Color(0xFF14213D)),
+                  ),
+                  SizedBox(height: 4.0),
+                  Text(
+                    FFLocalizations.of(context)
+                            .languageCode
+                            .startsWith('fr')
+                        ? 'Gardez cette page : elle se met à jour automatiquement.'
+                        : 'Keep this page: it updates automatically.',
+                    style: GoogleFonts.poppins(
+                        fontSize: 12.5, color: Color(0xFF5B6478)),
+                  ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
-                child: Text(
-                  valueOrDefault<String>(
-                    widget!.requestNumber,
-                    'request number',
-                  ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.poppins(
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                        fontSize: 18.0,
-                        letterSpacing: 0.0,
-                        fontWeight:
-                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
-                child: FFButtonWidget(
-                  onPressed: () async {
-                    context.pushNamed(
-                      GuestJobTrackingPageWidget.routeName,
-                      queryParameters: {
-                        'guestAccessToken': serializeParam(
-                          widget!.guestAccessToken,
-                          ParamType.String,
-                        ),
-                      }.withoutNulls,
-                    );
-                  },
-                  text: FFLocalizations.of(context).getText(
-                    'm8hg61w9' /* Track my request */,
-                  ),
-                  options: FFButtonOptions(
-                    height: 80.0,
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: FlutterFlowTheme.of(context).primary,
-                    textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.montserrat(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .fontStyle,
-                          ),
-                          color: Colors.white,
-                          letterSpacing: 0.0,
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).titleSmall.fontStyle,
-                        ),
-                    elevation: 0.0,
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
