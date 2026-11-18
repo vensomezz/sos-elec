@@ -227,7 +227,7 @@ class _ProfileCustomerWidgetState extends State<ProfileCustomerWidget>
                 children: [
                   Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Color(0xFF4B39EF),
+                    color: Color(0xFF1D4ED8),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                     ),
@@ -278,7 +278,7 @@ class _ProfileCustomerWidgetState extends State<ProfileCustomerWidget>
                       'phone',
                     ),
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          font: GoogleFonts.interTight(
+                          font: GoogleFonts.montserrat(
                             fontWeight: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .fontWeight,
@@ -370,7 +370,7 @@ class _ProfileCustomerWidgetState extends State<ProfileCustomerWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.plusJakartaSans(
+                                        font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.normal,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
@@ -413,7 +413,7 @@ class _ProfileCustomerWidgetState extends State<ProfileCustomerWidget>
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  font: GoogleFonts.interTight(
+                                  font: GoogleFonts.montserrat(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .fontWeight,
@@ -460,7 +460,7 @@ class _ProfileCustomerWidgetState extends State<ProfileCustomerWidget>
                         color: Color(0xFFF1F4F8),
                         textStyle:
                             FlutterFlowTheme.of(context).bodyLarge.override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge

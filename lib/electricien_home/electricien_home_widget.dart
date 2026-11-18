@@ -94,7 +94,7 @@ class _ElectricienHomeWidgetState extends State<ElectricienHomeWidget> {
                   '2uoymg8f' /* Electrician */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .fontWeight,

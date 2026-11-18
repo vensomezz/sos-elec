@@ -57,7 +57,7 @@ class _TermsandconditionsWidgetState extends State<TermsandconditionsWidget> {
               'dd70vlvw' /* Terms & conditions */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(
+                  font: GoogleFonts.montserrat(
                     fontWeight:
                         FlutterFlowTheme.of(context).headlineMedium.fontWeight,
                     fontStyle:
@@ -103,7 +103,7 @@ class _TermsandconditionsWidgetState extends State<TermsandconditionsWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.inter(
+                                    font: GoogleFonts.poppins(
                                       fontWeight: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .fontWeight,

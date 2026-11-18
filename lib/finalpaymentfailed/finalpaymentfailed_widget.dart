@@ -108,7 +108,7 @@ class _FinalpaymentfailedWidgetState extends State<FinalpaymentfailedWidget> {
                   'wh83gjiq' /* Payment Cancelled! */,
                 ),
                 style: FlutterFlowTheme.of(context).displaySmall.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .displaySmall
                             .fontWeight,
@@ -131,7 +131,7 @@ class _FinalpaymentfailedWidgetState extends State<FinalpaymentfailedWidget> {
                   'y0pcs75z' /* $425.24 */,
                 ),
                 style: FlutterFlowTheme.of(context).displayLarge.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .displayLarge
                             .fontWeight,
@@ -154,7 +154,7 @@ class _FinalpaymentfailedWidgetState extends State<FinalpaymentfailedWidget> {
                 ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).labelLarge.override(
-                      font: GoogleFonts.inter(
+                      font: GoogleFonts.poppins(
                         fontWeight:
                             FlutterFlowTheme.of(context).labelLarge.fontWeight,
                         fontStyle:
@@ -192,7 +192,7 @@ class _FinalpaymentfailedWidgetState extends State<FinalpaymentfailedWidget> {
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).bodyLarge.override(
-                                  font: GoogleFonts.inter(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .fontWeight,

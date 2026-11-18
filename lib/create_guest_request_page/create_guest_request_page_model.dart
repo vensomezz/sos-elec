@@ -44,6 +44,9 @@ class CreateGuestRequestPageModel
 
   DateTime? appointmentDate;
 
+  /// Empêche le double envoi pendant l'enregistrement.
+  bool isSubmitting = false;
+
   ///  State fields for stateful widgets in this page.
 
   // Stores action output result for [Backend Call - Query Rows] action in CreateGuestRequestPage widget.

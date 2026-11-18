@@ -269,7 +269,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                 children: [
                   Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Color(0xFF4B39EF),
+                    color: Color(0xFF1D4ED8),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50.0),
                     ),
@@ -386,7 +386,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                       'phone',
                     ),
                     style: FlutterFlowTheme.of(context).headlineSmall.override(
-                          font: GoogleFonts.interTight(
+                          font: GoogleFonts.montserrat(
                             fontWeight: FontWeight.w500,
                             fontStyle: FlutterFlowTheme.of(context)
                                 .headlineSmall
@@ -502,7 +502,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.plusJakartaSans(
+                                          font: GoogleFonts.poppins(
                                             fontWeight: FontWeight.normal,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
@@ -584,7 +584,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        font: GoogleFonts.plusJakartaSans(
+                                        font: GoogleFonts.poppins(
                                           fontWeight: FontWeight.normal,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
@@ -646,7 +646,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      font: GoogleFonts.plusJakartaSans(
+                                      font: GoogleFonts.poppins(
                                         fontWeight: FontWeight.normal,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -687,7 +687,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  font: GoogleFonts.interTight(
+                                  font: GoogleFonts.montserrat(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .fontWeight,
@@ -734,7 +734,7 @@ class _ProfileElectricianWidgetState extends State<ProfileElectricianWidget>
                         color: Color(0xFFF1F4F8),
                         textStyle:
                             FlutterFlowTheme.of(context).bodyLarge.override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge

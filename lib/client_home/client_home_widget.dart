@@ -63,7 +63,7 @@ class _ClientHomeWidgetState extends State<ClientHomeWidget> {
                   'uzx4bezc' /* Customer */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .fontWeight,
@@ -111,7 +111,7 @@ class _ClientHomeWidgetState extends State<ClientHomeWidget> {
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                font: GoogleFonts.interTight(
+                                font: GoogleFonts.montserrat(
                                   fontWeight: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .fontWeight,

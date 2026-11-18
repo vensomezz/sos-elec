@@ -66,7 +66,7 @@ class _CancelJobDialogWidgetState extends State<CancelJobDialogWidget> {
               '7rpstpi9' /* Are you sure you want to cance... */,
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                  font: GoogleFonts.inter(
+                  font: GoogleFonts.poppins(
                     fontWeight:
                         FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                     fontStyle:
@@ -93,7 +93,7 @@ class _CancelJobDialogWidgetState extends State<CancelJobDialogWidget> {
               iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
               color: FlutterFlowTheme.of(context).primary,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                    font: GoogleFonts.interTight(
+                    font: GoogleFonts.montserrat(
                       fontWeight:
                           FlutterFlowTheme.of(context).titleSmall.fontWeight,
                       fontStyle:
@@ -121,7 +121,7 @@ class _CancelJobDialogWidgetState extends State<CancelJobDialogWidget> {
               decoration: InputDecoration(
                 isDense: true,
                 labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                      font: GoogleFonts.inter(
+                      font: GoogleFonts.poppins(
                         fontWeight:
                             FlutterFlowTheme.of(context).labelMedium.fontWeight,
                         fontStyle:
@@ -137,7 +137,7 @@ class _CancelJobDialogWidgetState extends State<CancelJobDialogWidget> {
                   '31o3iyeu' /* Reasons for cancellation: */,
                 ),
                 hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
-                      font: GoogleFonts.inter(
+                      font: GoogleFonts.poppins(
                         fontWeight:
                             FlutterFlowTheme.of(context).labelMedium.fontWeight,
                         fontStyle:
@@ -181,7 +181,7 @@ class _CancelJobDialogWidgetState extends State<CancelJobDialogWidget> {
                 fillColor: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                       fontStyle:
@@ -234,7 +234,7 @@ class _CancelJobDialogWidgetState extends State<CancelJobDialogWidget> {
               iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
               color: FlutterFlowTheme.of(context).primary,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                    font: GoogleFonts.interTight(
+                    font: GoogleFonts.montserrat(
                       fontWeight:
                           FlutterFlowTheme.of(context).titleSmall.fontWeight,
                       fontStyle:

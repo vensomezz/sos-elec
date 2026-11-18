@@ -56,7 +56,7 @@ class _PrivacypolicyWidgetState extends State<PrivacypolicyWidget> {
               '9u8t27vm' /* Privacy policy */,
             ),
             style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  font: GoogleFonts.interTight(
+                  font: GoogleFonts.montserrat(
                     fontWeight:
                         FlutterFlowTheme.of(context).headlineMedium.fontWeight,
                     fontStyle:
@@ -104,7 +104,7 @@ class _PrivacypolicyWidgetState extends State<PrivacypolicyWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      font: GoogleFonts.inter(
+                                      font: GoogleFonts.poppins(
                                         fontWeight: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .fontWeight,

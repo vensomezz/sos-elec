@@ -203,7 +203,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .displaySmall
                                             .override(
-                                              font: GoogleFonts.plusJakartaSans(
+                                              font: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.w600,
                                                 fontStyle:
                                                     FlutterFlowTheme.of(context)
@@ -223,7 +223,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                 .of(context)
                                             .displaySmall
                                             .override(
-                                              font: GoogleFonts.plusJakartaSans(
+                                              font: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.normal,
                                                 fontStyle:
                                                     FlutterFlowTheme.of(context)
@@ -239,7 +239,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                       .displaySmall
                                                       .fontStyle,
                                             ),
-                                        indicatorColor: Color(0xFF4B39EF),
+                                        indicatorColor: Color(0xFF1D4ED8),
                                         indicatorWeight: 4.0,
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 12.0, 16.0, 12.0),
@@ -464,7 +464,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                             TextInputType
                                                                 .emailAddress,
                                                         cursorColor:
-                                                            Color(0xFF4B39EF),
+                                                            Color(0xFF1D4ED8),
                                                         validator: _model
                                                             .emailAddressTextControllerValidator
                                                             .asValidator(
@@ -637,7 +637,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                       .fontStyle,
                                                             ),
                                                         cursorColor:
-                                                            Color(0xFF4B39EF),
+                                                            Color(0xFF1D4ED8),
                                                         validator: _model
                                                             .passwordTextControllerValidator
                                                             .asValidator(
@@ -803,7 +803,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                       0.0,
                                                                       0.0),
                                                           color:
-                                                              Color(0xFF4B39EF),
+                                                              Color(0xFF1D4ED8),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1195,7 +1195,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           font:
-                                                                              GoogleFonts.plusJakartaSans(
+                                                                              GoogleFonts.poppins(
                                                                             fontWeight:
                                                                                 FontWeight.bold,
                                                                             fontStyle:
@@ -1890,7 +1890,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                             TextInputType
                                                                 .emailAddress,
                                                         cursorColor:
-                                                            Color(0xFF4B39EF),
+                                                            Color(0xFF1D4ED8),
                                                         validator: _model
                                                             .emailAddressCreateTextControllerValidator
                                                             .asValidator(
@@ -2063,7 +2063,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                       .fontStyle,
                                                             ),
                                                         cursorColor:
-                                                            Color(0xFF4B39EF),
+                                                            Color(0xFF1D4ED8),
                                                         validator: _model
                                                             .passwordCreateTextControllerValidator
                                                             .asValidator(
@@ -2237,7 +2237,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                             ),
                                                         minLines: 1,
                                                         cursorColor:
-                                                            Color(0xFF4B39EF),
+                                                            Color(0xFF1D4ED8),
                                                         validator: _model
                                                             .passwordConfirmTextControllerValidator
                                                             .asValidator(
@@ -2392,7 +2392,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                       0.0,
                                                                       0.0),
                                                           color:
-                                                              Color(0xFF4B39EF),
+                                                              Color(0xFF1D4ED8),
                                                           textStyle:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -2658,7 +2658,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           font:
-                                                                              GoogleFonts.plusJakartaSans(
+                                                                              GoogleFonts.poppins(
                                                                             fontWeight:
                                                                                 FontWeight.bold,
                                                                             fontStyle:
@@ -2838,7 +2838,7 @@ class _Auth1WidgetState extends State<Auth1Widget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           font:
-                                                                              GoogleFonts.plusJakartaSans(
+                                                                              GoogleFonts.poppins(
                                                                             fontWeight:
                                                                                 FontWeight.bold,
                                                                             fontStyle:

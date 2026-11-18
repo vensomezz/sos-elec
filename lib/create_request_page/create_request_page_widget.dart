@@ -3,6 +3,8 @@ import '/auth/supabase_auth/auth_util.dart';
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/request_media.dart';
+import '/custom_code/request_form_helpers.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import 'dart:ui';
@@ -130,7 +132,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                   'hem7skb6' /* Create service request */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .fontWeight,
@@ -224,7 +226,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                       'smz9pkg6' /* Urgent / ASAP */,
                                                     ),
                                                     options: FFButtonOptions(
-                                                      height: 40.0,
+                                                      height: 52.0,
                                                       padding:
                                                           EdgeInsetsDirectional
                                                               .fromSTEB(
@@ -239,10 +241,9 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                   0.0,
                                                                   0.0,
                                                                   0.0),
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .primary,
+                                                      color: _model.requestType == 'urgent'
+                                                          ? Color(0xFFE53935)
+                                                          : FlutterFlowTheme.of(context).secondaryBackground,
                                                       textStyle:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -259,8 +260,9 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                       .titleSmall
                                                                       .fontStyle,
                                                                 ),
-                                                                color: Colors
-                                                                    .white,
+                                                                color: _model.requestType == 'urgent'
+                        ? Colors.white
+                        : Color(0xFFE53935),
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight: FlutterFlowTheme.of(
@@ -272,7 +274,11 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                     .titleSmall
                                                                     .fontStyle,
                                                               ),
-                                                      elevation: 0.0,
+                                                      elevation: _model.requestType == 'urgent' ? 4.0 : 0.0,
+                    borderSide: BorderSide(
+                      color: Color(0xFFE53935),
+                      width: 2.0,
+                    ),
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               8.0),
@@ -300,7 +306,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         '5esyj585' /* Book an appointment */,
                                                       ),
                                                       options: FFButtonOptions(
-                                                        height: 40.0,
+                                                        height: 52.0,
                                                         padding:
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(
@@ -315,10 +321,9 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
+                                                        color: _model.requestType == 'appointment'
+                                                            ? Color(0xFF2E7D32)
+                                                            : FlutterFlowTheme.of(context).secondaryBackground,
                                                         textStyle:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -335,8 +340,9 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                         .titleSmall
                                                                         .fontStyle,
                                                                   ),
-                                                                  color: Colors
-                                                                      .white,
+                                                                  color: _model.requestType == 'appointment'
+                        ? Colors.white
+                        : Color(0xFF2E7D32),
                                                                   letterSpacing:
                                                                       0.0,
                                                                   fontWeight: FlutterFlowTheme.of(
@@ -348,10 +354,13 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                       .titleSmall
                                                                       .fontStyle,
                                                                 ),
-                                                        elevation: 0.0,
+                                                        elevation: _model.requestType == 'appointment' ? 4.0 : 0.0,
+                    borderSide: BorderSide(
+                      color: Color(0xFF2E7D32),
+                      width: 2.0,
+                    ),
                                                         borderRadius:
-                                                            BorderRadius
-                                                                .circular(8.0),
+                                                            BorderRadius.circular(14.0),
                                                       ),
                                                     ),
                                                   ),
@@ -464,7 +473,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -516,7 +525,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                           .of(context)
                                                       .labelMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -549,7 +558,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                           .of(context)
                                                       .labelMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -633,7 +642,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -692,7 +701,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -726,7 +735,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -804,7 +813,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -859,7 +868,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -893,7 +902,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -971,7 +980,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1027,7 +1036,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1061,7 +1070,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1139,7 +1148,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1194,7 +1203,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1228,7 +1237,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1306,7 +1315,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1361,7 +1370,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1395,7 +1404,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1473,7 +1482,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1519,7 +1528,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1563,7 +1572,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1597,7 +1606,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1673,7 +1682,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1723,7 +1732,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1757,7 +1766,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1833,7 +1842,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -1883,7 +1892,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1917,7 +1926,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -1993,7 +2002,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -2059,7 +2068,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   .titleSmall
                                                   .override(
                                                     font:
-                                                        GoogleFonts.interTight(
+                                                        GoogleFonts.montserrat(
                                                       fontWeight:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -2210,7 +2219,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             font:
-                                                                                GoogleFonts.inter(
+                                                                                GoogleFonts.poppins(
                                                                               fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                                                                               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                             ),
@@ -2230,7 +2239,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             font:
-                                                                                GoogleFonts.inter(
+                                                                                GoogleFonts.poppins(
                                                                               fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                                                                               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                             ),
@@ -2250,7 +2259,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                                           .bodyMedium
                                                                           .override(
                                                                             font:
-                                                                                GoogleFonts.inter(
+                                                                                GoogleFonts.poppins(
                                                                               fontWeight: FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                                                                               fontStyle: FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                                                                             ),
@@ -2292,7 +2301,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -2326,7 +2335,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                         .labelMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FlutterFlowTheme.of(
                                                                         context)
@@ -2402,7 +2411,7 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                        font: GoogleFonts.inter(
+                                                        font: GoogleFonts.poppins(
                                                           fontWeight:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -2440,184 +2449,25 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 10.0, 0.0, 0.0),
-                                            child: FFButtonWidget(
-                                              onPressed: () async {
-                                                final selectedMedia =
-                                                    await selectMediaWithSourceBottomSheet(
-                                                  context: context,
-                                                  storageFolderPath:
-                                                      'service_request',
-                                                  allowPhoto: true,
-                                                );
-                                                if (selectedMedia != null &&
-                                                    selectedMedia.every((m) =>
-                                                        validateFileFormat(
-                                                            m.storagePath,
-                                                            context))) {
-                                                  safeSetState(() => _model
-                                                          .isDataUploading_uploadDataDhr =
-                                                      true);
-                                                  var selectedUploadedFiles =
-                                                      <FFUploadedFile>[];
-
-                                                  var downloadUrls = <String>[];
-                                                  try {
-                                                    selectedUploadedFiles =
-                                                        selectedMedia
-                                                            .map((m) =>
-                                                                FFUploadedFile(
-                                                                  name: m
-                                                                      .storagePath
-                                                                      .split(
-                                                                          '/')
-                                                                      .last,
-                                                                  bytes:
-                                                                      m.bytes,
-                                                                  height: m
-                                                                      .dimensions
-                                                                      ?.height,
-                                                                  width: m
-                                                                      .dimensions
-                                                                      ?.width,
-                                                                  blurHash: m
-                                                                      .blurHash,
-                                                                  originalFilename:
-                                                                      m.originalFilename,
-                                                                ))
-                                                            .toList();
-
-                                                    downloadUrls =
-                                                        await uploadSupabaseStorageFiles(
-                                                      bucketName:
-                                                          'service_request_photos',
-                                                      selectedFiles:
-                                                          selectedMedia,
-                                                    );
-                                                  } finally {
-                                                    _model.isDataUploading_uploadDataDhr =
-                                                        false;
-                                                  }
-                                                  if (selectedUploadedFiles
-                                                              .length ==
-                                                          selectedMedia
-                                                              .length &&
-                                                      downloadUrls.length ==
-                                                          selectedMedia
-                                                              .length) {
-                                                    safeSetState(() {
-                                                      _model.uploadedLocalFile_uploadDataDhr =
-                                                          selectedUploadedFiles
-                                                              .first;
-                                                      _model.uploadedFileUrl_uploadDataDhr =
-                                                          downloadUrls.first;
-                                                    });
-                                                  } else {
-                                                    safeSetState(() {});
-                                                    return;
-                                                  }
-                                                }
-
-                                                _model.addToPhotoUrls(_model
-                                                    .uploadedFileUrl_uploadDataDhr);
+                                                    0.0, 14.0, 0.0, 6.0),
+                                            child: MediaPickerButtons(
+                                              onAdded: (url) {
+                                                _model.addToPhotoUrls(url);
                                                 safeSetState(() {});
                                               },
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                '7mdat2b4' /* Add photo */,
-                                              ),
-                                              options: FFButtonOptions(
-                                                height: 40.0,
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        16.0, 0.0, 16.0, 0.0),
-                                                iconPadding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                            0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          font: GoogleFonts
-                                                              .interTight(
-                                                            fontWeight:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .fontWeight,
-                                                            fontStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .fontStyle,
-                                                          ),
-                                                          color: Colors.white,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmall
-                                                                  .fontWeight,
-                                                          fontStyle:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .titleSmall
-                                                                  .fontStyle,
-                                                        ),
-                                                elevation: 0.0,
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
                                             ),
                                           ),
-                                          Spacer(),
-                                          Spacer(),
-                                          Container(
-                                            width: 400.0,
-                                            height: 100.0,
-                                            decoration: BoxDecoration(
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                            ),
-                                            child: Builder(
-                                              builder: (context) {
-                                                final photoUrls1 = _model
-                                                    .photoUrls
-                                                    .toList()
-                                                    .take(5)
-                                                    .toList();
-
-                                                return ListView.builder(
-                                                  padding: EdgeInsets.zero,
-                                                  primary: false,
-                                                  scrollDirection:
-                                                      Axis.vertical,
-                                                  itemCount: photoUrls1.length,
-                                                  itemBuilder: (context,
-                                                      photoUrls1Index) {
-                                                    final photoUrls1Item =
-                                                        photoUrls1[
-                                                            photoUrls1Index];
-                                                    return ClipRRect(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              8.0),
-                                                      child: Image.network(
-                                                        key: ValueKey(
-                                                            photoUrls1Item),
-                                                        'https://picsum.photos/seed/377/600',
-                                                        width: 200.0,
-                                                        height: 72.8,
-                                                        fit: BoxFit.cover,
-                                                      ),
-                                                    );
-                                                  },
-                                                );
+                                          SizedBox(height: 8.0),
+                                          Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 4.0, 0.0, 12.0),
+                                            child: MediaGallery(
+                                              urls: _model.photoUrls.toList(),
+                                              height: 92.0,
+                                              onRemove: (url) {
+                                                _model.removeFromPhotoUrls(url);
+                                                safeSetState(() {});
                                               },
                                             ),
                                           ),
@@ -2626,125 +2476,139 @@ class _CreateRequestPageWidgetState extends State<CreateRequestPageWidget> {
                                                 AlignmentDirectional(0.0, 1.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
-                                                _model.insertRow =
-                                                    await ServiceRequestsTable()
-                                                        .insert({
-                                                  'customer_uuid':
-                                                      currentUserUid,
-                                                  'customer_name': _model
-                                                      .textController1.text,
-                                                  'customer_email': _model
-                                                      .textController2.text,
-                                                  'customer_phone': _model
-                                                      .textController3.text,
-                                                  'problem_description': _model
-                                                      .textController10.text,
-                                                  'status': 'pending',
-                                                  'location_address':
-                                                      functions.combineAddress(
-                                                          _model.textController4
-                                                              .text,
-                                                          _model.textController5
-                                                              .text,
-                                                          _model.textController6
-                                                              .text),
-                                                  'customer_type': 'account',
-                                                  'appointment_start': supaSerialize<
-                                                          DateTime>(
-                                                      functions.getAppointmentStart(
-                                                          _model
-                                                              .appointmentDate!)),
-                                                  'appointment_end': supaSerialize<
-                                                          DateTime>(
-                                                      functions.getAppointmentEnd(
-                                                          _model
-                                                              .appointmentDate!)),
-                                                  'service_category':
-                                                      _model.requestType,
-                                                  'urgency_level': 'normal',
-                                                });
-                                                await UsersTable().update(
-                                                  data: {
-                                                    'name': _model
-                                                        .textController1.text,
-                                                    'phone': _model
-                                                        .textController3.text,
-                                                    'email': _model
-                                                        .textController2.text,
-                                                  },
-                                                  matchingRows: (rows) =>
-                                                      rows.eqOrNull(
-                                                    'id',
-                                                    currentUserUid,
-                                                  ),
-                                                );
-                                                if (_model.textController7
-                                                            .text !=
-                                                        null &&
-                                                    _model.textController7
-                                                            .text !=
-                                                        '') {
-                                                  await AddressesTable()
-                                                      .insert({
-                                                    'user_id': currentUserUid,
-                                                    'address_line': _model
-                                                        .textController7.text,
-                                                    'city': _model
-                                                        .textController8.text,
-                                                    'postcode': _model
-                                                        .textController9.text,
-                                                    'is_default': false,
-                                                  });
+                                                if (_model.isSubmitting) {
+                                                  return;
                                                 }
-                                                await ServiceRequestsTable()
-                                                    .update(
-                                                  data: {
-                                                    'photo_urls': functions
-                                                        .stringListToJson(_model
-                                                            .photoUrls
-                                                            .toList()),
-                                                  },
-                                                  matchingRows: (rows) =>
-                                                      rows.eqOrNull(
-                                                    'id',
-                                                    _model.insertRow?.id,
-                                                  ),
+                                                final isAppointment =
+                                                    _model.requestType ==
+                                                        'appointment';
+                                                final address =
+                                                    functions.combineAddress(
+                                                        _model.textController4
+                                                            .text,
+                                                        _model.textController5
+                                                            .text,
+                                                        _model.textController6
+                                                            .text);
+                                                final error =
+                                                    validateRequestForm(
+                                                  name: _model
+                                                      .textController1.text,
+                                                  phone: _model
+                                                      .textController3.text,
+                                                  address: _model
+                                                      .textController4.text,
+                                                  description: _model
+                                                      .textController10.text,
+                                                  isAppointment: isAppointment,
+                                                  appointmentDate:
+                                                      _model.appointmentDate,
                                                 );
-                                                ScaffoldMessenger.of(context)
-                                                    .showSnackBar(
-                                                  SnackBar(
-                                                    content: Text(
-                                                      'Votre demande a bien été enregistrée.  Notre équipe examine actuellement votre demande.  Veuillez consulter la page « Détails de votre demande» pour suivre l’évolution de celle-ci./ Your request has been submitted successfully. Our team is reviewing your request now. Please check your Job Details page for live updates.',
-                                                      style: TextStyle(
-                                                        color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primaryText,
+                                                if (error != null) {
+                                                  showRequestMessage(
+                                                      context, error,
+                                                      isError: true);
+                                                  return;
+                                                }
+                                                _model.isSubmitting = true;
+                                                safeSetState(() {});
+                                                try {
+                                                  final slotStart = isAppointment
+                                                      ? functions
+                                                          .getAppointmentStart(
+                                                              _model
+                                                                  .appointmentDate!)
+                                                      : null;
+                                                  final slotEnd = isAppointment
+                                                      ? functions
+                                                          .getAppointmentEnd(
+                                                              _model
+                                                                  .appointmentDate!)
+                                                      : null;
+                                                  _model.insertRow =
+                                                      await ServiceRequestsTable()
+                                                          .insert({
+                                                    'customer_uuid':
+                                                        currentUserUid,
+                                                    'customer_name': _model
+                                                        .textController1.text,
+                                                    'customer_email': _model
+                                                        .textController2.text,
+                                                    'customer_phone': _model
+                                                        .textController3.text,
+                                                    'problem_description':
+                                                        _model.textController10
+                                                            .text,
+                                                    'status': 'pending',
+                                                    'location_address': address,
+                                                    'customer_type': 'account',
+                                                    'appointment_start':
+                                                        supaSerialize<DateTime>(
+                                                            slotStart),
+                                                    'appointment_end':
+                                                        supaSerialize<DateTime>(
+                                                            slotEnd),
+                                                    'service_category':
+                                                        _model.requestType,
+                                                    'urgency_level':
+                                                        isAppointment
+                                                            ? 'normal'
+                                                            : 'urgent',
+                                                    'photo_urls': _model
+                                                        .photoUrls
+                                                        .toList(),
+                                                  });
+                                                  await UsersTable().update(
+                                                    data: {
+                                                      'name': _model
+                                                          .textController1.text,
+                                                      'phone': _model
+                                                          .textController3.text,
+                                                      'email': _model
+                                                          .textController2.text,
+                                                    },
+                                                    matchingRows: (rows) =>
+                                                        rows.eqOrNull(
+                                                      'id',
+                                                      currentUserUid,
+                                                    ),
+                                                  );
+                                                  if (_model.textController7
+                                                          .text.isNotEmpty) {
+                                                    await AddressesTable()
+                                                        .insert({
+                                                      'user_id': currentUserUid,
+                                                      'address_line': _model
+                                                          .textController7.text,
+                                                      'city': _model
+                                                          .textController8.text,
+                                                      'postcode': _model
+                                                          .textController9.text,
+                                                      'is_default': false,
+                                                    });
+                                                  }
+                                                  showRequestMessage(context,
+                                                      'Votre demande a bien été envoyée ! Suivez-la dans « Détails de votre demande ». / Your request has been sent!');
+                                                  context.pushNamed(
+                                                    JobDetailsPageWidget
+                                                        .routeName,
+                                                    queryParameters: {
+                                                      'serviceRequest':
+                                                          serializeParam(
+                                                        _model.insertRow,
+                                                        ParamType.SupabaseRow,
                                                       ),
-                                                    ),
-                                                    duration: Duration(
-                                                        milliseconds: 4000),
-                                                    backgroundColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .secondary,
-                                                  ),
-                                                );
-                                                safeSetState(() {});
-
-                                                context.pushNamed(
-                                                  JobDetailsPageWidget
-                                                      .routeName,
-                                                  queryParameters: {
-                                                    'serviceRequest':
-                                                        serializeParam(
-                                                      _model.insertRow,
-                                                      ParamType.SupabaseRow,
-                                                    ),
-                                                  }.withoutNulls,
-                                                );
-
-                                                safeSetState(() {});
+                                                    }.withoutNulls,
+                                                  );
+                                                } catch (e) {
+                                                  showRequestMessage(
+                                                      context,
+                                                      'L\'envoi a échoué. Vérifiez vos informations et réessayez. / Sending failed, please try again.',
+                                                      isError: true);
+                                                } finally {
+                                                  _model.isSubmitting = false;
+                                                  safeSetState(() {});
+                                                }
                                               },
                                               text: FFLocalizations.of(context)
                                                   .getText(

@@ -148,7 +148,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
-                                    font: GoogleFonts.plusJakartaSans(
+                                    font: GoogleFonts.poppins(
                                       fontWeight: FontWeight.normal,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
@@ -191,7 +191,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                         spacing: 10.0,
                         textStyle:
                             FlutterFlowTheme.of(context).bodyMedium.override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -235,7 +235,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodySmall.override(
-                                      font: GoogleFonts.plusJakartaSans(
+                                      font: GoogleFonts.poppins(
                                         fontWeight: FontWeight.bold,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .bodySmall
@@ -267,7 +267,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -321,7 +321,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -375,7 +375,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
@@ -432,7 +432,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(
-                                      font: GoogleFonts.plusJakartaSans(
+                                      font: GoogleFonts.poppins(
                                         fontWeight: FontWeight.normal,
                                         fontStyle: FlutterFlowTheme.of(context)
                                             .titleMedium
@@ -539,7 +539,7 @@ class _PaymentWidgetState extends State<PaymentWidget> {
                         ),
                         style:
                             FlutterFlowTheme.of(context).labelMedium.override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .labelMedium

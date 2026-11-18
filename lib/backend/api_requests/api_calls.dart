@@ -768,6 +768,8 @@ class CreateGuestRequestCall {
     String? serviceCategory = '',
     String? urgencyLevel = '',
     dynamic? photoUrlsJson,
+    DateTime? appointmentStart,
+    DateTime? appointmentEnd,
   }) async {
     final baseUrl = SupabaseGroup.getBaseUrl();
 
@@ -782,8 +784,8 @@ class CreateGuestRequestCall {
   "service_category": ${serviceCategory == null ? 'null' : '"${escapeStringForJson(serviceCategory)}"'},
   "urgency_level": ${urgencyLevel == null ? 'null' : '"${escapeStringForJson(urgencyLevel)}"'},
   "photo_urls": ${photoUrls},
-  "appointment_start": null,
-  "appointment_end": null
+  "appointment_start": ${appointmentStart == null ? 'null' : '"${appointmentStart.toUtc().toIso8601String()}"'},
+  "appointment_end": ${appointmentEnd == null ? 'null' : '"${appointmentEnd.toUtc().toIso8601String()}"'}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Create guest request',

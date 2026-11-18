@@ -4,6 +4,7 @@ import '/components/cancel_job_dialog_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/request_media.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
@@ -72,7 +73,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                 'created date',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                       fontStyle:
@@ -114,7 +115,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                         ? 'Business'
                         : 'Residentiel',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.inter(
+                          font: GoogleFonts.poppins(
                             fontWeight: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .fontWeight,
@@ -139,7 +140,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                 'customer name',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                       fontStyle:
@@ -158,7 +159,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                 'request number',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                       fontStyle:
@@ -197,7 +198,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                   textAlign: TextAlign.start,
                   maxLines: 3,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(
+                        font: GoogleFonts.poppins(
                           fontWeight: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .fontWeight,
@@ -241,7 +242,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                 ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.inter(
+                      font: GoogleFonts.poppins(
                         fontWeight:
                             FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                         fontStyle:
@@ -255,17 +256,10 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                     ),
               ),
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                key: ValueKey(valueOrDefault<String>(
-                  widget!.serviceRequest?.photoUrls?.toString(),
-                  'photo url',
-                )),
-                'https://picsum.photos/seed/979/600',
-                width: 200.0,
-                height: 141.0,
-                fit: BoxFit.cover,
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+              child: RequestMediaGallery(
+                photoUrls: widget!.serviceRequest?.photoUrls,
               ),
             ),
             FlutterFlowDropDown<String>(
@@ -297,7 +291,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
               width: 279.4,
               height: 40.0,
               textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                    font: GoogleFonts.inter(
+                    font: GoogleFonts.poppins(
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                       fontStyle:
@@ -376,7 +370,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                   width: 241.4,
                   height: 40.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.inter(
+                        font: GoogleFonts.poppins(
                           fontWeight: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .fontWeight,
@@ -430,7 +424,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                         '7zktkh1k' /* The electrician has accepted t... */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.inter(
+                            font: GoogleFonts.poppins(
                               fontWeight: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
@@ -470,7 +464,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                         '93t6aqhk' /* ✅ Deposit received. */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            font: GoogleFonts.inter(
+                            font: GoogleFonts.poppins(
                               fontWeight: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .fontWeight,
@@ -554,7 +548,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  font: GoogleFonts.interTight(
+                                  font: GoogleFonts.montserrat(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .fontWeight,
@@ -642,7 +636,7 @@ class _ServiceRequestadminWidgetState extends State<ServiceRequestadminWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          font: GoogleFonts.interTight(
+                          font: GoogleFonts.montserrat(
                             fontWeight: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .fontWeight,

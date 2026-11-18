@@ -40,6 +40,9 @@ class CreateRequestPageModel extends FlutterFlowModel<CreateRequestPageWidget> {
 
   DateTime? appointmentDate;
 
+  /// Empêche le double envoi pendant l'enregistrement.
+  bool isSubmitting = false;
+
   String? appointmentSlot;
 
   DateTime? appointmentStart;

@@ -542,7 +542,7 @@ class _OurpricesWidgetState extends State<OurpricesWidget> {
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .titleLarge
                                                                               .override(
-                                                                                font: GoogleFonts.interTight(
+                                                                                font: GoogleFonts.montserrat(
                                                                                   fontWeight: FlutterFlowTheme.of(context).titleLarge.fontWeight,
                                                                                   fontStyle: FlutterFlowTheme.of(context).titleLarge.fontStyle,
                                                                                 ),
@@ -1146,7 +1146,7 @@ These prices are... */
                                                         .bodyMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             fontStyle: FontStyle
@@ -1192,7 +1192,7 @@ Tell us ... */
                                                         .bodyMedium
                                                         .override(
                                                           font:
-                                                              GoogleFonts.inter(
+                                                              GoogleFonts.poppins(
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             fontStyle:

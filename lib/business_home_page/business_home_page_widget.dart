@@ -91,7 +91,7 @@ class _BusinessHomePageWidgetState extends State<BusinessHomePageWidget> {
                       'jb69vk34' /* Business */,
                     ),
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
-                          font: GoogleFonts.interTight(
+                          font: GoogleFonts.montserrat(
                             fontWeight: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .fontWeight,
@@ -143,7 +143,7 @@ class _BusinessHomePageWidgetState extends State<BusinessHomePageWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  font: GoogleFonts.interTight(
+                                  font: GoogleFonts.montserrat(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .fontWeight,
@@ -183,7 +183,7 @@ class _BusinessHomePageWidgetState extends State<BusinessHomePageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  font: GoogleFonts.inter(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .fontWeight,

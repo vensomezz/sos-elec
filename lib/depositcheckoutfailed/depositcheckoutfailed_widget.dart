@@ -109,7 +109,7 @@ class _DepositcheckoutfailedWidgetState
                   'nw9veyjd' /* Payment Cancelled! */,
                 ),
                 style: FlutterFlowTheme.of(context).displaySmall.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .displaySmall
                             .fontWeight,
@@ -132,7 +132,7 @@ class _DepositcheckoutfailedWidgetState
                   '7sgd39s8' /* $425.24 */,
                 ),
                 style: FlutterFlowTheme.of(context).displayLarge.override(
-                      font: GoogleFonts.interTight(
+                      font: GoogleFonts.montserrat(
                         fontWeight: FlutterFlowTheme.of(context)
                             .displayLarge
                             .fontWeight,
@@ -155,7 +155,7 @@ class _DepositcheckoutfailedWidgetState
                 ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).labelLarge.override(
-                      font: GoogleFonts.inter(
+                      font: GoogleFonts.poppins(
                         fontWeight:
                             FlutterFlowTheme.of(context).labelLarge.fontWeight,
                         fontStyle:
@@ -193,7 +193,7 @@ class _DepositcheckoutfailedWidgetState
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         textStyle:
                             FlutterFlowTheme.of(context).bodyLarge.override(
-                                  font: GoogleFonts.inter(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FlutterFlowTheme.of(context)
                                         .bodyLarge
                                         .fontWeight,

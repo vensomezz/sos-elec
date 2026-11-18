@@ -158,7 +158,7 @@ class _FinalpaymentsuccessWidgetState extends State<FinalpaymentsuccessWidget> {
                 color: Color(0x4C4B39EF),
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: Color(0xFF4B39EF),
+                  color: Color(0xFF1D4ED8),
                   width: 2.0,
                 ),
               ),
@@ -167,7 +167,7 @@ class _FinalpaymentsuccessWidgetState extends State<FinalpaymentsuccessWidget> {
                 padding: EdgeInsets.all(30.0),
                 child: Icon(
                   Icons.check_rounded,
-                  color: Color(0xFF4B39EF),
+                  color: Color(0xFF1D4ED8),
                   size: 60.0,
                 ),
               ),
@@ -184,7 +184,7 @@ class _FinalpaymentsuccessWidgetState extends State<FinalpaymentsuccessWidget> {
                         fontStyle:
                             FlutterFlowTheme.of(context).displaySmall.fontStyle,
                       ),
-                      color: Color(0xFF4B39EF),
+                      color: Color(0xFF1D4ED8),
                       fontSize: 36.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
@@ -222,7 +222,7 @@ class _FinalpaymentsuccessWidgetState extends State<FinalpaymentsuccessWidget> {
                 ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).labelLarge.override(
-                      font: GoogleFonts.plusJakartaSans(
+                      font: GoogleFonts.poppins(
                         fontWeight: FontWeight.normal,
                         fontStyle:
                             FlutterFlowTheme.of(context).labelLarge.fontStyle,
@@ -266,7 +266,7 @@ class _FinalpaymentsuccessWidgetState extends State<FinalpaymentsuccessWidget> {
                         color: Color(0xFFE0E3E7),
                         textStyle:
                             FlutterFlowTheme.of(context).bodyLarge.override(
-                                  font: GoogleFonts.plusJakartaSans(
+                                  font: GoogleFonts.poppins(
                                     fontWeight: FontWeight.normal,
                                     fontStyle: FlutterFlowTheme.of(context)
                                         .bodyLarge
